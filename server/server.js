@@ -15,6 +15,8 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: authMiddleware,
+  cache: 'bounded',
+  persistedQueries: false
 });
 
 // middleware 
